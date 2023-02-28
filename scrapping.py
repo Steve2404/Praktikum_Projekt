@@ -4,7 +4,7 @@ import requests
 import re
 import bs4
 
-url = "https://www.indiatimes.com/"
+url = "https://static.nrk.no"
 
 headers = {
     "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0"}
@@ -19,13 +19,14 @@ else:
     soup = BeautifulSoup(response.text, "html.parser")
     #links = [elt.getText() for elt in soup.find_all(name="title")]
     
-    # links = soup.find_all(lambda tag: (tag.name=='meta') & (tag.has_attr('name') & tag.has_attr('content')))
-    # content = [str(tag['content']) for tag in links if tag['name'] in ['keywords', 'description']]
+    #links = soup.find_all(lambda tag: (tag.name=='meta') & (tag.has_attr('name') & tag.has_attr('content')))
+    #content = [str(tag['content']) for tag in links if tag['name'] in ['keywords', 'description']]
     
     # Header :
-    #tags = soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6"])
-    # sur chaque header on retire toutes les balises html pour rester avec le text. (.stripped_strings) 
-    #content = [" ".join(tag.stripped_strings) for tag in tags]
+    #tags = soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "body"])
+    tags = soup.find_all("head")
+    #sur chaque header on retire toutes les balises html pour rester avec le text. (.stripped_strings) 
+    content = [" ".join(tag.stripped_strings) for tag in tags]
 
     # content :
     # tags_to_ignore = ["h1", "h2", "h3", "h4", "h5","h6", "noscript", "style", "script", "head", "title", "meta", "[document]"]
@@ -44,12 +45,12 @@ else:
     # print(" ".join(result))
     
     #language Selection :
-    try:
-        tags = soup.html.attrs['lang']
-    except KeyError:
-        tags = "en"
-    print(tags)
+    # try:
+    #     tags = soup.html.attrs['lang']
+    # except KeyError:
+    #     tags = "en"
+    # print(tags)
 
 
-
-    #print(" ".join(content))
+    print(" ".join(content))
+    #print(" ".join(links))
