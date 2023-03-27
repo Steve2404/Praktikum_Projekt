@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["Duree", "ioam", "Matplotlib", "openai", "pyplot"]
+  "cSpell.words": [
+    "Duree",
+    "ioam",
+    "Matplotlib",
+    "openai",
+    "pbar",
+    "pyplot",
+    "tqdm"
+  ]
 }

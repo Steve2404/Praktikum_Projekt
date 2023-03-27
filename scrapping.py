@@ -4,7 +4,7 @@ import requests
 import re
 import bs4
 
-url = "https://static.nrk.no"
+url = "https://oxid.ru"
 
 headers = {
     "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0"}
