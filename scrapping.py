@@ -4,7 +4,7 @@ import requests
 import re
 import bs4
 
-url = "https://oxid.ru"
+url = "https://adultvideotop.com"
 
 headers = {
     "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0"}
@@ -23,8 +23,8 @@ else:
     #content = [str(tag['content']) for tag in links if tag['name'] in ['keywords', 'description']]
     
     # Header :
-    #tags = soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "body"])
-    tags = soup.find_all("head")
+    tags = soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "body"])
+    #tags = soup.find_all("head")
     #sur chaque header on retire toutes les balises html pour rester avec le text. (.stripped_strings) 
     content = [" ".join(tag.stripped_strings) for tag in tags]
 
