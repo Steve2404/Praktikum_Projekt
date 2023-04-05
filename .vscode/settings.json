@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "chardet",
     "Duree",
     "ioam",
     "Matplotlib",
@@ -8,6 +9,7 @@
     "pbar",
     "punct",
     "pyplot",
+    "spacy",
     "tqdm"
   ]
 }
