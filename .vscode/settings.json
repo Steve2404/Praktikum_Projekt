@@ -3,8 +3,10 @@
     "Duree",
     "ioam",
     "Matplotlib",
+    "noscript",
     "openai",
     "pbar",
+    "punct",
     "pyplot",
     "tqdm"
   ]
