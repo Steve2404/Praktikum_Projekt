@@ -10,6 +10,7 @@
     "punct",
     "pyplot",
     "spacy",
+    "specshop",
     "tqdm"
   ]
 }
